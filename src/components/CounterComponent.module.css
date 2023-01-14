@@ -28,8 +28,8 @@
     left: 0;
     top: 0;
     content: '';
-    height: 100%;
-    width: 100%;
+    height: 101%;
+    width: 101%;
     border-radius: 1em;
     aspect-ratio: 1;
 }
@@ -40,48 +40,85 @@
 }
 
 .imageContainer::after {
-    background: linear-gradient(to right, transparent 25%, var(--card-background) 125%)
+    background: linear-gradient(to right, transparent 25%, var(--card-background) 165%)
 }
 
 .infoPanel {
     text-align: left;
-    padding: 0 1em;
-}
-
-.infoPanel > p {
-    margin: 0;
-    margin-bottom: 0.5rem;
+    padding: 0 0 0 1em;
+    display: flex;
+    flex-direction: column;
 }
 
 .category {
     font-size: 1em;
     font-weight: 200;
+    margin: 0;
 }
 
 .label {
+    margin: 0;
     font-size: 2.5em;
     font-weight: 600;
+}
 
+.label button {
+    color: var(--primary-font-color);
+    margin-left: 5px;
+}
+
+.label > button > span {
+    font-size: 1.2em;
 }
 
 .countLabel {
     font-size: 1.7em;
     font-weight: 400;
+    margin: 1rem 0;
 }
 
 .count {
     color: var(--accent-color);
 }
 
+.container button {
+    color: var(--primary-text-color);
+}
+
+.container button:disabled {
+    color: var(--primary-text-color);
+    filter: brightness(30%);
+}
+
+.container button:hover {
+    filter: brightness(150%);
+    background-color: var(--card-background);
+}
+
 .actionPanel {
     display: flex;
     gap: 5px;
+    margin: 0;
+    margin-top: 1em;
+    margin-left: -0.5em;
 }
 
-.actionPanel > button {
-    color: var(--primary-text-color);
+.victoryLabel {
+    margin: 0;
+    font-size: 3.2em;
+    font-weight: 600;
+    color: var(--accent-color);
 }
-.actionPanel > button:hover {
-    filter: brightness(150%);
-    background-color: var(--card-background);
+
+.victoryText {
+    font-size: 1.4em;
+    margin: 0.5em 0;
+}
+
+.victoryText > button > span {
+    font-size: 0.8em;
+}
+
+.infoPanel + div > div {
+    background-color: var(--accent-color);
 }
