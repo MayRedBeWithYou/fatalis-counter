@@ -1,0 +1,15 @@
+:root {
+    --primary-font-color: hsl(0 0% 87%);
+    --app-background: hsl(0 0% 14%);
+    --card-background: hsl(0 0% 10%);
+    --shadow-color: hsl(0 0% 10%);
+    --accent-color: hsl(40 52% 52%);
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --primary-font-color: hsl(0 0% 35%);
+        --app-background: hsl(0 0% 90%);
+        --card-background: hsl(0 0% 95%);
+    }
+}
