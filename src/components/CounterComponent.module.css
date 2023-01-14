@@ -1,0 +1,87 @@
+.container {
+    width: 500px;
+    height: 180px;
+    background: var(--card-background);
+    box-shadow: 0 0 20px 0 var(--card-background);
+    border-radius: 1em;
+    display: flex;
+    padding: 1em;
+}
+
+.imageContainer {
+    position: relative;
+    border-radius: 1em;
+    aspect-ratio: 1;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.imageContainer > img {
+    height: 100%;
+    border-radius: inherit;
+}
+
+.imageContainer::before,
+.imageContainer::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '';
+    height: 100%;
+    width: 100%;
+    border-radius: 1em;
+    aspect-ratio: 1;
+}
+
+.imageContainer::before {
+    opacity: 40%;
+    background-color: var(--card-background);
+}
+
+.imageContainer::after {
+    background: linear-gradient(to right, transparent 25%, var(--card-background) 125%)
+}
+
+.infoPanel {
+    text-align: left;
+    padding: 0 1em;
+}
+
+.infoPanel > p {
+    margin: 0;
+    margin-bottom: 0.5rem;
+}
+
+.category {
+    font-size: 1em;
+    font-weight: 200;
+}
+
+.label {
+    font-size: 2.5em;
+    font-weight: 600;
+
+}
+
+.countLabel {
+    font-size: 1.7em;
+    font-weight: 400;
+}
+
+.count {
+    color: var(--accent-color);
+}
+
+.actionPanel {
+    display: flex;
+    gap: 5px;
+}
+
+.actionPanel > button {
+    color: var(--primary-text-color);
+}
+.actionPanel > button:hover {
+    filter: brightness(150%);
+    background-color: var(--card-background);
+}
